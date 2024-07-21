@@ -10,6 +10,7 @@
 		display: grid;
 		grid-row-gap: 16px;
 		grid-column-gap: 32px;
+		grid-template-columns: repeat(4, 1fr);
 
 		&__input, .input {
 			grid-column: span 4;

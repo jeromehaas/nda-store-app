@@ -8,10 +8,10 @@ const Studio = () => {
 	
 	// RENDER
 	return (
-	<div class='studio'>
-		<Preview />
-		<Sidebar />
-	</div>
+		<div class='studio'>
+			<Preview/>
+			<Sidebar/>
+		</div>
 	);
 	
 };

@@ -1,8 +1,19 @@
 // IMPORTS
 import './preview.scss';
+import {FormContext} from '~/contexts/form-context.jsx';
+import {useContext} from 'solid-js';
 
 // PREVIEW
 const Preview = () => {
+	
+	// SETUP CONTEXT
+	const [form] = useContext(FormContext);
+	
+	// FORMAT DATE
+	const formatDate = (dateString) => {
+		const [year, month, day] = dateString.split('-');
+		return `${day}.${month}.${year}`;
+	};
 	
 	// RENDER
 	return (
@@ -12,16 +23,18 @@ const Preview = () => {
 			<h2 class='document__heading'>Non-Disclosure Agreement</h2>
 			<div class='document__paragraph paragraph'>
 				<h3 class='paragraph__heading'>1. Parties involved</h3>
-				<p class='paragraph__text'>This confidentiality agreement, entered into on DD.MM.YY, includes the following parts:</p>
+				<p class='paragraph__text'>This confidentiality agreement, entered into on {formatDate(form.fields.date)} , includes the following parts:</p>
 				<div class='paragraph__parties parties'>
 					<div class='parties__address address'>
-						<p class='address__item'>EORA Energy SNC</p>
-						<p class='address__item'>Via della Stazione 39</p>
-						<p class='address__item'>6780 Airolo</p>
-						<p class='address__item'>Switzerland</p>
+						<p class='address__item'>{form.fields.company || 'Company'}</p>
+						<p class='address__item'>{form.fields.firstname || 'Firstname'} {form.fields.lastname || 'Lastname'}</p>
+						<p class='address__item'>{form.fields.street || 'Street'}</p>
+						<p class='address__item'>{form.fields.plz || 'PLZ'} {form.fields.town || 'Town'}</p>
+						<p class='address__item'>{form.fields.country || 'Country'}</p>
 					</div>
 					<ul class='parties__address address'>
 						<p class='address__item'>EORA Energy SNC</p>
+						<p class='address__item'>Luca Meli</p>
 						<p class='address__item'>Via della Stazione 39</p>
 						<p class='address__item'>6780 Airolo</p>
 						<p class='address__item'>Switzerland</p>
@@ -92,18 +105,18 @@ const Preview = () => {
 						<img class='confirmation__signature' src='signature.svg' />
 						<figure class='confirmation__line'></figure>
 						<div class='confirmation__infos infos'>
-							<p class='infos__company'>Solar City AG</p>
-							<p class='infos__company'>15.01.2024</p>
-							<p class='infos__company'>Markus Muster</p>
+							<p class='infos__company'>{form.fields.company || 'Company'}</p>
+							<p class='infos__company'>{formatDate(form.fields.date)}</p>
+							<p class='infos__company'>{form.fields.firstname || 'Firstname'} {form.fields.lastname || 'Lastname'}</p>
 						</div>
 					</div>
 					<div class='signatures__confirmation confirmation'>
-						<img class='confirmation__signature' src='signature.svg' />
+						{form.fields.signature ? <img class='confirmation__signature' src={form.fields.signature} /> : <div class='confirmation__signature-placeholder'></div>}
 						<figure class='confirmation__line'></figure>
 						<div class='confirmation__infos infos'>
-							<p class='infos__company'>Solar City AG</p>
-							<p class='infos__company'>15.01.2024</p>
-							<p class='infos__company'>Markus Muster</p>
+							<p class='infos__company'>Eora Energy </p>
+							<p class='infos__company'>{formatDate(form.fields.date)}</p>
+							<p class='infos__company'>Luca Meli</p>
 						</div>
 					</div>
 				</div>

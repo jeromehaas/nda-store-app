@@ -2,13 +2,13 @@
 import './text-input.scss';
 
 // TEXT INPUT
-const TextInput = ({className, label, name, id}) => {
+const TextInput = (props) => {
 	
 	// RENDER
 	return (
-	<div class={`text-input ${className}`}>
-		<label class='text-input__label' for={name}>{label}</label>
-		<input class='text-input__field' name={name} id={id} type='text'/>
+	<div class={`text-input ${props.className}`}>
+		<label class='text-input__label' for={props.name}>{props.label}</label>
+		<input class='text-input__field' name={props.name} id={props.id} type='text' value={props.value} onInput={props.onInput}/>
 	</div>
 	);
 	
