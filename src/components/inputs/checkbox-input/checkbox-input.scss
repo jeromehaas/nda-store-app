@@ -1,0 +1,23 @@
+.checkbox-input {
+
+	&__label {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	&__options, .options {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-gap: 24px;
+
+		&__field {
+			width: 20px;
+			height: 20px;
+			padding: 8px;
+			border-radius: 4px;
+			border: 1px solid grey;
+		}
+
+	}
+
+}
