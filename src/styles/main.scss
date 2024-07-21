@@ -1,5 +1,7 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+@import './configs/reset.scss';
+@import './configs/typography.scss';
+@import './configs/scrollbar.scss';
+@import './configs/global.scss';
+
+
+

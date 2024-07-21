@@ -1,0 +1,20 @@
+*::-webkit-scrollbar {
+	width: 2px !important;
+}
+
+*::-webkit-scrollbar-track {
+	background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: black;
+}
+
+body::-webkit-scrollbar {
+	width: 0 !important;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+	-webkit-appearance: none;
+}
