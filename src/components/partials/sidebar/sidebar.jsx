@@ -9,6 +9,7 @@ import SignaturePad from 'signature_pad';
 import {createSignal, onMount, useContext} from 'solid-js';
 import {FormContext} from '~/contexts/form-context.jsx';
 import {createEffect} from 'solid-js';
+import {createContractPdf} from '~/utils/create-contract-pdf.js';
 
 // SIDEBAR
 const Sidebar = () => {
@@ -24,7 +25,8 @@ const Sidebar = () => {
 	
 	// HANDLE END SIGNATURE DRAW
 	const handleCanvasInputUpdate = () => {
-		setForm(form => ({...form, fields: {...form.fields, signature: signaturePad().toDataURL('image/svg+xml')}}));
+		//setForm(form => ({...form, fields: {...form.fields, signature: signaturePad().toDataURL('image/svg+xml')}}));
+		setForm(form => ({...form, fields: {...form.fields, signature: signaturePad().toDataURL('image/png')}}));
 	};
 	
 	// HANDLE TEXT INPUT UPDATE
@@ -61,7 +63,18 @@ const Sidebar = () => {
 	
 	// HANDLE SUBMIT
 	const handleSubmit = (event) => {
+		
+		// PREVENT DEFAULT
 		event.preventDefault();
+		
+		// PRINT SOMETHING
+		console.log('click');
+		
+		// GET VALUES
+		createContractPdf({values: form.fields})
+		
+		
+		
 	};
 	
 	// SETUP SIGNATURE-PAD
