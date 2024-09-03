@@ -17,6 +17,7 @@ const FormProvider = (props) => {
 	
 	// SETUP STORE
 	const [form, setForm] = createStore({
+		language: 'en',
 		fields: {
 			company: '',
 			firstname: '',

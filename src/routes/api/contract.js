@@ -1,13 +1,11 @@
 // IMPORTS
-import { createContractPdf } from '~/utils/create-contract-pdf.js';
+import {createContractPdf} from '~/utils/create-contract-pdf.js';
 
 // POST REQUEST
-export const POST = () =>  {
+export const POST = () => {
 	
-	// RUN
+	// CREATE CONTRACT
 	createContractPdf();
-	
-	
 	
 	// SEND RESPONSE
 	return new Response('hello du');

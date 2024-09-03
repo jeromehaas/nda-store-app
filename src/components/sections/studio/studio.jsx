@@ -1,7 +1,7 @@
 // IMPORTS
 import './studio.scss';
-import Preview from '~/components/partials/preview/preview.jsx';
-import Sidebar from '~/components/partials/sidebar/sidebar.jsx';
+import Preview from '~/components/blocks/preview/preview.jsx';
+import Sidebar from '~/components/blocks/sidebar/sidebar.jsx';
 
 // STUDIO
 const Studio = () => {

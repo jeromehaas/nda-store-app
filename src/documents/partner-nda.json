@@ -1,0 +1,454 @@
+[
+	[
+		{
+			"type": "heading",
+			"value": {
+				"en": "Non-Disclosure Agreement",
+				"de": "Geheimhaltungsvereinbarung",
+				"it": "Accordo di Non Divulgazione"
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "1. Parties involved",
+				"de": "1. Involvierte Parteien",
+				"it": "1. Parti coinvolte"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "This confidentiality agreement, entered into on {{ date }}, includes the following parts:",
+				"de": "Diese Vertraulichkeitsvereinbarung, die am {{ date }} abgeschlossen wurde, umfasst die folgenden Teile:",
+				"it": "Questo accordo di riservatezza, stipulato il {{ date }}, include le seguenti parti:"
+			}
+		},
+		{
+			"type": "two-column-list",
+			"columns": [
+				
+				[
+					{
+						"value": {
+							"en": "EORA Energy SNC",
+							"de": "EORA Energy SNC",
+							"it": "EORA Energy SNC"
+						}
+					},
+					{
+						"value": {
+							"en": "Luca Meli",
+							"de": "Luca Meli",
+							"it": "Luca Meli"
+						}
+					},
+					{
+						"value": {
+							"en": "Via della Stazione 39",
+							"de": "Via della Stazione 39",
+							"it": "Via della Stazione 39"
+						}
+					},
+					{
+						"value": {
+							"en": "6780 Airolo",
+							"de": "6780 Airolo",
+							"it": "6780 Airolo"
+						}
+					},
+					{
+						"value": {
+							"en": "Switzerland",
+							"de": "Schweiz",
+							"it": "Svizzera"
+						}
+					}
+				],
+				[
+					{
+						"value": {
+							"en": "{{ company }}",
+							"de": "{{ company }}",
+							"it": "{{ company }}"
+						}
+					},
+					{
+						"value": {
+							"en": "{{ firstname }} {{ lastname }}",
+							"de": "{{ firstname }} {{ lastname }}",
+							"it": "{{ firstname }} {{ lastname }}"
+						}
+					},
+					{
+						"value": {
+							"en": "{{ street }}",
+							"de": "{{ street }}",
+							"it": "{{ street }}"
+						}
+					},
+					{
+						"value": {
+							"en": "{{ plz }} {{ town }}",
+							"de": "{{ plz }} {{ town }}",
+							"it": "{{ plz }} {{ town }}"
+						}
+					},
+					{
+						"value": {
+							"en": "{{ country }}",
+							"de": "{{ country }}",
+							"it": "{{ country }}"
+						}
+					}
+				]
+			]
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "2. Duty of secret",
+				"de": "2. Geheimhaltungspflicht",
+				"it": "2. Obbligo di segretezza"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The obligations of secrecy are mutual. The two parties involved in this agreement undertake to strictly comply with secrecy obligations. Both Parties are obliged to keep confidential all confidential information exchanged during the execution of this Agreement, without exception.",
+				"de": "Die Geheimhaltungspflichten sind gegenseitig. Die beiden an dieser Vereinbarung beteiligten Parteien verpflichten sich, die Geheimhaltungspflichten strikt einzuhalten. Beide Parteien sind verpflichtet, alle während der Durchführung dieser Vereinbarung ausgetauschten vertraulichen Informationen ohne Ausnahme vertraulich zu behandeln.",
+				"it": "Gli obblighi di segretezza sono reciproci. Le due parti coinvolte in questo accordo si impegnano a rispettare rigorosamente gli obblighi di segretezza. Entrambe le Parti sono obbligate a mantenere riservate tutte le informazioni confidenziali scambiate durante l'esecuzione di questo Accordo, senza eccezioni."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "3. Cooperation",
+				"de": "3. Kooperation",
+				"it": "3. Cooperazione"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The Parties intend to enter into a collaboration within the framework of a project or business activity, in which the Disclosing Party shares confidential information related to the business idea, product, or process to the Receiving Party, which acts as a collaborator or investor interested in participating in or supporting the development, implementation, or financing of the project or business activity. The collaboration will be governed by this confidentiality agreement in order to protect the confidentiality of the information exchanged between the Parties and to regulate the rights and obligations of the same in the context of the collaboration.",
+				"de": "Die Parteien beabsichtigen, im Rahmen eines Projekts oder einer Geschäftstätigkeit eine Zusammenarbeit einzugehen, bei der die offenlegende Partei der empfangenden Partei vertrauliche Informationen im Zusammenhang mit der Geschäftsidee, dem Produkt oder dem Prozess mitteilt. Die empfangende Partei fungiert dabei als Mitarbeiter oder Investor, der daran interessiert ist, an der Entwicklung, Umsetzung oder Finanzierung des Projekts oder der Geschäftstätigkeit teilzunehmen oder diese zu unterstützen. Die Zusammenarbeit wird durch diese Vertraulichkeitsvereinbarung geregelt, um die Vertraulichkeit der zwischen den Parteien ausgetauschten Informationen zu schützen und die Rechte und Pflichten der Parteien im Rahmen der Zusammenarbeit zu regeln.",
+				"it": "Le Parti intendono avviare una collaborazione nell'ambito di un progetto o di un'attività commerciale, in cui la Parte Divulgante condivide informazioni riservate relative all'idea imprenditoriale, al prodotto o al processo con la Parte Ricevente, che agisce come collaboratore o investitore interessato a partecipare o sostenere lo sviluppo, l'implementazione o il finanziamento del progetto o dell'attività commerciale. La collaborazione sarà regolata dal presente accordo di riservatezza al fine di proteggere la riservatezza delle informazioni scambiate tra le Parti e di regolare i diritti e gli obblighi delle stesse nel contesto della collaborazione."
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "This agreement regulates the cooperation between the Parties involved. The nature of the collaboration is defined as cooperation aimed at the joint development, implementation, and commercialization of the Disclosing Party's idea/product/service, involving the active participation, contribution of resources, or financial support from the Receiving Party interested in participating in or supporting the project/business activity.",
+				"de": "Diese Vereinbarung regelt die Zusammenarbeit zwischen den beteiligten Parteien. Die Art der Zusammenarbeit wird definiert als eine Kooperation, die auf die gemeinsame Entwicklung, Umsetzung und Vermarktung der Idee/des Produkts/der Dienstleistung der offenlegenden Partei abzielt, wobei die aktive Beteiligung, der Beitrag von Ressourcen oder die finanzielle Unterstützung der empfangenden Partei, die an der Teilnahme oder Unterstützung des Projekts/der Geschäftstätigkeit interessiert ist, einbezogen wird.",
+				"it": "Questo accordo regola la cooperazione tra le Parti coinvolte. La natura della collaborazione è definita come una cooperazione finalizzata allo sviluppo congiunto, all'implementazione e alla commercializzazione dell'idea/prodotto/servizio della Parte Divulgante, che coinvolge la partecipazione attiva, il contributo di risorse o il supporto finanziario della Parte Ricevente interessata a partecipare o sostenere il progetto/attività commerciale."
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "Confidential information provided or received as part of this cooperation may only be used for the agreed purposes. The use of such information for any other purpose without the written consent of the parties involved is prohibited.",
+				"de": "Vertrauliche Informationen, die im Rahmen dieser Zusammenarbeit bereitgestellt oder empfangen werden, dürfen nur für die vereinbarten Zwecke verwendet werden. Die Verwendung solcher Informationen für andere Zwecke ohne die schriftliche Zustimmung der beteiligten Parteien ist untersagt.",
+				"it": "Le informazioni riservate fornite o ricevute nell'ambito di questa cooperazione possono essere utilizzate solo per gli scopi concordati. L'uso di tali informazioni per qualsiasi altro scopo senza il consenso scritto delle parti coinvolte è vietato."
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "All confidential information received shall be used solely for the purposes of this collaboration.",
+				"de": "Alle erhaltenen vertraulichen Informationen dürfen ausschließlich für die Zwecke dieser Zusammenarbeit verwendet werden.",
+				"it": "Tutte le informazioni riservate ricevute dovranno essere utilizzate esclusivamente ai fini di questa collaborazione."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "4. Definition of confidential information",
+				"de": "4. Definition vertraulicher Informationen",
+				"it": "4. Definizione di informazioni riservate"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "Information subject to secrecy obligations is defined as any information, data, technical knowledge, trade secrets, or other confidential information, in any form or by any means, which is provided or disclosed by either Party, whether orally or in writing, or which is accessed or communicated through presentations, documents, samples, etc., concerning the activities, products, processes, operations, research, development, inventions, business strategies, or other information related to the Disclosing Party.",
+				"de": "Informationen, die der Geheimhaltungspflicht unterliegen, werden definiert als alle Informationen, Daten, technisches Wissen, Geschäftsgeheimnisse oder andere vertrauliche Informationen, in jeglicher Form oder auf jeglichem Wege, die von einer der Parteien bereitgestellt oder offengelegt werden, sei es mündlich oder schriftlich, oder die durch Präsentationen, Dokumente, Muster usw. zugänglich gemacht oder kommuniziert werden, und die sich auf die Aktivitäten, Produkte, Prozesse, Operationen, Forschung, Entwicklung, Erfindungen, Geschäftsstrategien oder andere Informationen im Zusammenhang mit der offenlegenden Partei beziehen.",
+				"it": "Le informazioni soggette a obblighi di segretezza sono definite come qualsiasi informazione, dato, conoscenza tecnica, segreto commerciale o altra informazione riservata, in qualsiasi forma o con qualsiasi mezzo, che viene fornita o divulgata da una delle Parti, sia oralmente che per iscritto, o che viene resa accessibile o comunicata attraverso presentazioni, documenti, campioni, ecc., riguardanti le attività, i prodotti, i processi, le operazioni, la ricerca, lo sviluppo, le invenzioni, le strategie aziendali o altre informazioni relative alla Parte Divulgante."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "5. Non-confidential information",
+				"de": "5. Nicht vertrauliche Informationen",
+				"it": "5. Informazioni non riservate"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The following information is outside the scope of the agreement and is not subject to secrecy obligations. Information that is:",
+				"de": "Die folgenden Informationen fallen nicht in den Geltungsbereich der Vereinbarung und unterliegen nicht der Geheimhaltungspflicht. Informationen, die:",
+				"it": "Le seguenti informazioni sono al di fuori dell'ambito dell'accordo e non sono soggette a obblighi di segretezza. Informazioni che sono:"
+			}
+		},
+		{
+			"type": "list",
+			"rows": [
+				{
+					"value": {
+						"en": "Already in the public domain or become public knowledge through no fault of the Receiving Party.",
+						"de": "Bereits öffentlich bekannt sind oder ohne Verschulden der empfangenden Partei öffentlich bekannt werden.",
+						"it": "Già di dominio pubblico o diventano di pubblico dominio senza colpa della Parte Ricevente."
+					}
+				},
+				{
+					"value": {
+						"en": "Legally in the possession of the Receiving Party at the time of entering into the NDA.",
+						"de": "Zum Zeitpunkt des Abschlusses der Geheimhaltungsvereinbarung rechtmäßig im Besitz der empfangenden Partei sind.",
+						"it": "Legalmente in possesso della Parte Ricevente al momento della stipula dell'NDA."
+					}
+				},
+				{
+					"value": {
+						"en": "Communicated to the Receiving Party by third parties without breach of confidentiality obligations.",
+						"de": "Der empfangenden Partei von Dritten ohne Verletzung von Vertraulichkeitsverpflichtungen mitgeteilt werden.",
+						"it": "Comunicate alla Parte Ricevente da terzi senza violazione degli obblighi di riservatezza."
+					}
+				},
+				{
+					"value": {
+						"en": "Developed independently of the Receiving Party without the use of confidential information.",
+						"de": "Unabhängig von der empfangenden Partei ohne Verwendung vertraulicher Informationen entwickelt wurden.",
+						"it": "Sviluppate in modo indipendente dalla Parte Ricevente senza l'uso di informazioni riservate."
+					}
+				}
+			]
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "6. Security measures",
+				"de": "6. Sicherheitsmaßnahmen",
+				"it": "6. Misure di sicurezza"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The Receiving Party shall take all necessary measures to protect the confidentiality of the information, including implementing appropriate technical and organizational security measures.",
+				"de": "Der Empfänger verpflichtet sich, alle notwendigen Maßnahmen zu ergreifen, um die Vertraulichkeit der Informationen zu schützen, einschließlich der Implementierung geeigneter technischer und organisatorischer Sicherheitsmaßnahmen.",
+				"it": "La Parte Ricevente deve adottare tutte le misure necessarie per proteggere la riservatezza delle informazioni, comprese l'implementazione di misure di sicurezza tecniche e organizzative appropriate."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "7. Duration of obligations",
+				"de": "7. Dauer der Verpflichtungen",
+				"it": "7. Durata degli obblighi"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The confidentiality obligations under this agreement shall remain in effect for a period of five years following the termination of the contractual relationship.",
+				"de": "Die Verpflichtungen zur Geheimhaltung gemäß diesem Vertrag bleiben für eine Dauer von fünf Jahren nach Beendigung des Vertragsverhältnisses bestehen.",
+				"it": "Gli obblighi di riservatezza previsti dal presente accordo rimarranno in vigore per un periodo di cinque anni successivo alla cessazione del rapporto contrattuale."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "8. Return and destruction",
+				"de": "8. Rückgabe und Vernichtung",
+				"it": "8. Restituzione e distruzione"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "Upon termination of the contractual relationship or at the request of the Disclosing Party, the Receiving Party must promptly return or destroy all confidential information.",
+				"de": "Nach Beendigung des Vertragsverhältnisses oder auf Aufforderung der offenlegenden Partei muss die empfangende Partei alle vertraulichen Informationen unverzüglich zurückgeben oder vernichten.",
+				"it": "Alla cessazione del rapporto contrattuale o su richiesta della Parte Divulgante, la Parte Ricevente deve restituire o distruggere prontamente tutte le informazioni riservate."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "9. Liability",
+				"de": "9. Haftung",
+				"it": "9. Responsabilità"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The parties shall be mutually liable for any damages resulting from a breach of the obligations under this agreement.",
+				"de": "Die Parteien haften gegenseitig für alle Schäden, die aus einem Verstoß gegen die Verpflichtungen aus diesem Vertrag resultieren.",
+				"it": "Le parti saranno reciprocamente responsabili per eventuali danni derivanti da una violazione degli obblighi previsti dal presente accordo."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "10. Duration and confidentiality obligations",
+				"de": "10. Dauer und Vertraulichkeitsverpflichtungen",
+				"it": "10. Durata e obblighi di riservatezza"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "The confidentiality obligations in this agreement shall remain in effect for the duration of the collaboration and for five years after its termination.",
+				"de": "Die Vertraulichkeitsverpflichtungen in diesem Vertrag bleiben für die Dauer der Zusammenarbeit und fünf Jahre nach deren Beendigung in Kraft.",
+				"it": "Gli obblighi di riservatezza previsti dal presente accordo rimarranno in vigore per la durata della collaborazione e per cinque anni dopo la sua cessazione."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "11. Return and destruction of confidential information",
+				"de": "11. Rückgabe und Vernichtung vertraulicher Informationen",
+				"it": "11. Restituzione e distruzione delle informazioni riservate"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "Upon written request by the Disclosing Party or upon termination of this Agreement, the Receiving Party shall immediately return all copies of the Confidential Information or, upon the Disclosing Party's request, destroy all copies thereof.",
+				"de": "Auf schriftliche Aufforderung der offenlegenden Partei oder nach Beendigung dieses Abkommens hat die empfangende Partei alle Kopien der vertraulichen Informationen unverzüglich zurückzugeben oder auf Wunsch der offenlegenden Partei alle Kopien davon zu vernichten.",
+				"it": "Su richiesta scritta della Parte Divulgante o alla cessazione del presente Accordo, la Parte Ricevente dovrà restituire immediatamente tutte le copie delle Informazioni Riservate o, su richiesta della Parte Divulgante, distruggere tutte le copie."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "12. Applicable law and jurisdiction",
+				"de": "12. Anwendbares Recht und Gerichtsstand",
+				"it": "12. Legge applicabile e giurisdizione"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "This Agreement shall be governed by and construed in accordance with the laws of the Swiss Confederation. Any dispute relating to the interpretation, execution, or termination of this Agreement shall be submitted to the competent courts of Zurich.",
+				"de": "Dieses Abkommen unterliegt dem Recht der Schweizerischen Eidgenossenschaft. Alle Streitigkeiten in Bezug auf die Auslegung, Durchführung oder Beendigung dieses Abkommens werden den zuständigen Gerichten in Zürich unterbreitet.",
+				"it": "Il presente Accordo sarà regolato e interpretato in conformità con le leggi della Confederazione Svizzera. Qualsiasi controversia relativa all'interpretazione, esecuzione o risoluzione del presente Accordo sarà sottoposta ai tribunali competenti di Zurigo."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "13. Final provisions",
+				"de": "13. Schlussbestimmungen",
+				"it": "13. Disposizioni finali"
+			}
+		},
+		{
+			"type": "paragraph",
+			"value": {
+				"en": "This Agreement constitutes the entire agreement between the Parties with respect to its subject matter and supersedes all prior agreements or understandings, whether written or oral.",
+				"de": "Dieses Abkommen stellt die gesamte Vereinbarung zwischen den Parteien in Bezug auf den Vertragsgegenstand dar und ersetzt alle vorherigen Vereinbarungen oder Absprachen, ob schriftlich oder mündlich.",
+				"it": "Il presente Accordo costituisce l'intero accordo tra le Parti in relazione all'oggetto e sostituisce tutti i precedenti accordi o intese, scritti o orali."
+			}
+		}
+	],
+	[
+		{
+			"type": "subheading",
+			"value": {
+				"en": "14. Signatures",
+				"de": "14. Unterschriften",
+				"it": "14. Firme"
+			}
+		},
+		{
+			"type": "two-column-signatures",
+			"columns": [
+				{
+					"image": {
+						"value": "signature.svg"
+					},
+					"infos": [
+						{
+							"value": {
+								"en": "EORA Energy",
+								"de": "EORA Energy",
+								"it": "EORA Energy"
+							}
+						},
+						{
+							"value": {
+								"en": "{{ date }}",
+								"de": "{{ date }}",
+								"it": "{{ date }}"
+							}
+						},
+						{
+							"value": {
+								"en": "Luca Meli",
+								"de": "Luca Meli",
+								"it": "Luca Meli"
+							}
+						}
+					]
+				},
+				{
+					"image": {
+						"value": "{{ signature }}"
+					},
+					"infos": [
+						{
+							"value": {
+								"en": "{{ company }}",
+								"de": "{{ company }}",
+								"it": "{{ company }}"
+							}
+						},
+						{
+							"value": {
+								"en": "{{ date }}",
+								"de": "{{ date }}",
+								"it": "{{ date }}"
+							}
+						},
+						{
+							"value": {
+								"en": "{{ firstname }} {{ lastname }}",
+								"de": "{{ firstname }} {{ lastname }}",
+								"it": "{{ firstname }} {{ lastname }}"
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+]
