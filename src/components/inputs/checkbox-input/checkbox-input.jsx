@@ -15,7 +15,7 @@ const CheckboxInput = (props) => {
 		<label class='checkbox-input__label' for={props.name}>{props.label[form.language]}</label>
 		{props.options.map((option) => (
 		<div class='checkbox-input__options options'>
-			<input class='options__field' name={option.name} id={option.id} type='checkbox' checked={option.checked} onClick={option.onInput}/>
+			<input class='options__field' name={option.name} id={option.id} type='checkbox' checked={option.value} onClick={option.onInput}/>
 			<p class='options__label'>{option.label[form.language]}</p>
 		</div>
 		))}

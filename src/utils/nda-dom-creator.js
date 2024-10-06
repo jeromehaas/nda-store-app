@@ -1,8 +1,8 @@
 // IMPORTS
 import partnerNda from '~/documents/partner-nda.json';
 
-// CLASS DOCUMENT RENDERER
-class DocumentRenderer {
+// CLASS NDA DOM CREATOR
+class NdaDomCreator {
 	
 	// CONSTRUCTOR
 	constructor() {
@@ -168,20 +168,20 @@ class DocumentRenderer {
 					// CREATE NODE
 					const contentNode = this.createNode({tag: 'div', className: 'document__content two-column-list'});
 					
-					// LOOP OVER COLUMNS
-					content.columns.map((column) => {
+					// LOOP OVER INFOS
+					content.value[language].infos.map((info) => {
 						
 						// CREATE COLUMN NODE
 						const columnNode = this.createNode({tag: 'div', className: 'two-column-list__column'});
 						
 						// LOOP OVER ROWS
-						column.map((row) => {
+						info.map((text) => {
 							
 							// CREATE ROW NODE
 							const rowNode = this.createNode({tag: 'p', className: 'two-column-list__row'});
 							
 							// APPEND TEXT
-							rowNode.innerText = row.value?.[language];
+							rowNode.innerText = text;
 							
 							// APPEND ROW-NODE TO COLUMN-NODE
 							columnNode.append(rowNode);
@@ -205,13 +205,13 @@ class DocumentRenderer {
 					const contentNode = this.createNode({tag: 'ul', className: 'document__content list'});
 					
 					// LOOP OVER ROWS
-					content.rows.map((row) => {
+					content.value[language].infos.map((text) => {
 						
 						// CREATE ROW NODE
 						const rowNode = this.createNode({tag: 'li', className: 'list__row'});
 						
 						// APPEND TEXT
-						rowNode.innerText = row.value[language];
+						rowNode.innerText = text;
 						
 						// APPEND ROW-NODE TO COLUMN-NODE
 						contentNode.append(rowNode);
@@ -230,11 +230,10 @@ class DocumentRenderer {
 					const contentNode = this.createNode({tag: 'div', className: 'document__content signatures'});
 					
 					// LOOP OVER COLUMNS
-					content.columns.map((column) => {
+					content.value[language].map((column) => {
 						
-						// CREATE COLUMN-NODE
+						// CREATE NODES
 						const columnNode = this.createNode({tag: 'div', className: 'signatures__column'});
-						
 						const imageNode = this.createNode({tag: 'img', className: 'signatures__image'});
 						const lineNode = this.createNode({tag: 'figure', className: 'signatures__line'});
 						
@@ -249,13 +248,13 @@ class DocumentRenderer {
 						const infosNode = this.createNode({tag: 'div', className: 'signatures__infos'});
 						
 						// LOOP OVER INFOS
-						column.infos.map((row) => {
+						column.infos.map((text) => {
 							
 							// CREATE INFOS-NODE
 							const rowNode = this.createNode({tag: 'div', className: 'signatures__info'});
 							
 							// APPEND TEXT
-							rowNode.innerText = row.value[language];
+							rowNode.innerText = text;
 							
 							// APPEND ROW-NODE TO INFOS-NODE
 							infosNode.append(rowNode);
@@ -293,4 +292,4 @@ class DocumentRenderer {
 }
 
 // EXPORTS
-export default DocumentRenderer;
+export default NdaDomCreator;

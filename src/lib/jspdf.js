@@ -1,6 +1,5 @@
 // IMPORTS
 import {jsPDF} from 'jspdf';
-import Signature from '/signature.png';
 
 // SETUP COLORS
 jsPDF.API.colors = {
@@ -66,19 +65,53 @@ jsPDF.API.setStyle = function(styles) {
 	
 };
 
-// ADD CUSTOM FUNCTION TO ADD SIGNATURE (LEFT)
-jsPDF.API.signatureLeft = function(items) {
+// ADD CUSTOM FUNCTION TO ADD TWO-COLUMN-LIST
+jsPDF.API.twoColumnList = function(value) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		draw: {color: this.colors.black},
+	});
+	
+	// LOOP OVER ROWS
+	value.infos[0].map((text) => {
+		
+		// PRINT TEXT
+		this.text(text, 30, this.height, 'justify');
+		
+		// UPDATE HEIGHT
+		this.height += 10;
+		
+	});
+	
+	// UPDATE HEIGHT
+	this.height -= (5 * 10);
+	
+	// LOOP OVER ROWS
+	value.infos[1].map((text) => {
+		// PRINT TEXT
+		this.text(text, 210, this.height, 'justify');
+		
+		// UPDATE HEIGHT
+		this.height += 10;
+		
+	});
+	
+};
+
+// ADD CUSTOM FUNCTION TO ADD TWO-COLUMN-LIST
+jsPDF.API.twoColumnSignature = function(value) {
+	
+	this.setStyle({
+		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
 		draw: {color: this.colors.black},
 		fill: {color: this.colors.black},
 		line: {dashPattern: [2, 2]},
 	});
 	
 	// DRAW SIGNATURE
-	this.addImage(Signature, 'png', 30, this.height, 80, 40);
+	this.addImage('/signature.png', 'png', 30, this.height, 80, 40);
 	
 	// UPDATE HEIGHT
 	this.spacer(45);
@@ -90,35 +123,22 @@ jsPDF.API.signatureLeft = function(items) {
 	this.spacer(10);
 	
 	// DRAW COMPANY NAME
-	this.text(items[0], 30, this.height);
+	this.text(value[0].infos[0], 30, this.height);
 	
 	// DRAW DATE
-	this.text(items[1], 180, this.height, {align: 'right'});
+	this.text(value[0].infos[1], 180, this.height, {align: 'right'});
 	
 	// ADD SPACE
 	this.spacer(10);
 	
 	// DRAW NAME
-	this.text(items[2], 30, this.height);
+	this.text(value[0].infos[2], 30, this.height);
 	
 	// UPDATE HEIGHT
 	this.spacer(-65);
 	
-};
-
-// ADD CUSTOM FUNCTION TO ADD SIGNATURE (LEFT)
-jsPDF.API.signatureRight = function(items) {
-	
-	// UPDATE STYLE
-	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
-		draw: {color: this.colors.black},
-		fill: {color: this.colors.black},
-		line: {dashPattern: [2, 2]},
-	});
-	
 	// DRAW SIGNATURE
-	this.addImage(items[2], 'png', 210, this.height, 80, 40);
+	this.addImage(value[1].image.value, 'png', 210, this.height, 80, 40);
 	
 	// UPDATE HEIGHT
 	this.spacer(45);
@@ -130,72 +150,46 @@ jsPDF.API.signatureRight = function(items) {
 	this.spacer(10);
 	
 	// DRAW COMPANY NAME
-	this.text(items[0], 210, this.height);
+	this.text(value[1].infos[0], 210, this.height);
 	
 	// DRAW DATE
-	this.text(items[1], 360, this.height, {align: 'right'});
+	this.text(value[1].infos[1], 360, this.height, {align: 'right'});
 	
 	// ADD SPACE
 	this.spacer(10);
 	
 	// DRAW NAME
-	this.text(items[3], 210, this.height);
-	
-	
-};
-
-// ADD CUSTOM FUNCTION TO ADD ADDRESS (LEFT)
-jsPDF.API.addressLeft = function(items) {
-	
-	// UPDATE STYLE
-	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
-		draw: {color: this.colors.black},
-	});
-	
-	// DRAW
-	for (let i = 0; i < items.length; i++) {
-		
-		// PRINT TEXT
-		this.text(items[i], 30, this.height, 'justify');
-		
-		// UPDATE HEIGHT
-		this.height += 10;
-		
-	}
-	
-	// UPDATE HEIGHT
-	this.height -= (5 * 10);
+	this.text(value[1].infos[2], 210, this.height);
 	
 };
 
-// ADD CUSTOM FUNCTION TO ADD ADDRESS (RIGHT)
-jsPDF.API.addressRight = function(items) {
+// ADD CUSTOM FUNCTION TO ADD TWO-COLUMN-LIST
+jsPDF.API.list = function(value) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
 		draw: {color: this.colors.black},
 	});
 	
-	// DRAW
-	for (let i = 0; i < items.length; i++) {
-		
+	// LOOP OVER ROWS
+	value.infos.map((text) => {
 		// PRINT TEXT
-		this.text(items[i], 160, this.height, 'justify');
+		this.listItem(text, 30, this.height, 'justify');
 		
 		// UPDATE HEIGHT
-		this.height += 10;
+		this.height += 5;
 		
-	}
+	});
 	
 };
+
 // ADD CUSTOM FUNCTION TO JSPDF
 jsPDF.API.textBlock = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
 		draw: {color: this.colors.black},
 	});
 	
@@ -226,7 +220,7 @@ jsPDF.API.listItem = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
 		draw: {color: this.colors.black},
 		fill: {color: this.colors.black},
 	});
@@ -271,7 +265,7 @@ jsPDF.API.header = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'bold', size: 16, color: this.colors.black},
+		font: {family: 'times', style: 'bold', size: 16, color: this.colors.black},
 		line: {width: 0.5},
 		fill: {color: this.colors.grey},
 		draw: {color: this.colors.black},
@@ -298,7 +292,7 @@ jsPDF.API.title = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'helvetica', style: 'bold', size: 12, color: this.colors.black},
+		font: {family: 'times', style: 'bold', size: 12, color: this.colors.black},
 		line: {width: 0.5},
 		fill: {color: this.colors.grey},
 		draw: {color: this.colors.black},

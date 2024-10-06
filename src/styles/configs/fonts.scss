@@ -1,0 +1,22 @@
+@font-face {
+	font-family: 'Times-New-Roman';
+	src:
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-regular.woff2') format('woff2'),
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-regular.woff') format('woff'),
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: 'Times-New-Roman';
+	src:
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-medium.woff2') format('woff2'),
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-medium.woff') format('woff'),
+		local('fonts/times-new-roman'), url('/src/assets/fonts/times-new-roman/times-new-roman-medium.ttf') format('ttf');
+	font-weight: 600;
+	font-style: normal;
+	font-display: block;
+}
+

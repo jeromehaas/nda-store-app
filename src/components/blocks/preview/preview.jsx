@@ -2,7 +2,7 @@
 import './preview.scss';
 import {FormContext} from '~/contexts/form-context.jsx';
 import {createEffect, createSignal, onCleanup, useContext} from 'solid-js';
-import DocumentRenderer from '~/lib/document-renderer.js';
+import NdaDomCreator from '~/utils/nda-dom-creator.js';
 
 // PREVIEW
 const Preview = () => {
@@ -19,7 +19,7 @@ const Preview = () => {
 	let documentContainerRef;
 	
 	// SETUP DOCUMENT
-	const renderer = new DocumentRenderer();
+	const ndaDomCreator = new NdaDomCreator();
 	
 	// HANDLE UPDATE SCROLL-POSITION
 	const handleUpdateScrollPosition = () => {
@@ -49,7 +49,7 @@ const Preview = () => {
 	createEffect(() => {
 		
 		// RENDER DOCUMENT
-		const document = renderer.print({language: form.language, variables: form.fields});
+		const document = ndaDomCreator.print({language: form.language, variables: form.fields});
 		
 		// CLEAR HTML
 		documentContainerRef.innerHTML = '';

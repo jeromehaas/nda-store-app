@@ -1,4 +1,4 @@
-
+# MAIN
 dist
 .solid
 .output
@@ -6,23 +6,23 @@ dist
 .netlify
 .vinxi
 
-# Environment
+# ENVIRONMENT
 .env
 .env*.local
 
-# dependencies
+# DEPENDENCIES
 /node_modules
 
-# IDEs and editors
+# IDES AND EDITORS
 /.idea
 .project
 .classpath
 *.launch
 .settings/
 
-# Temp
+# TEMP
 gitignore
 
-# System Files
+# SYSTEM FILES
 .DS_Store
 Thumbs.db

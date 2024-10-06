@@ -28,86 +28,63 @@
 		},
 		{
 			"type": "two-column-list",
-			"columns": [
-				
-				[
-					{
-						"value": {
-							"en": "EORA Energy SNC",
-							"de": "EORA Energy SNC",
-							"it": "EORA Energy SNC"
-						}
-					},
-					{
-						"value": {
-							"en": "Luca Meli",
-							"de": "Luca Meli",
-							"it": "Luca Meli"
-						}
-					},
-					{
-						"value": {
-							"en": "Via della Stazione 39",
-							"de": "Via della Stazione 39",
-							"it": "Via della Stazione 39"
-						}
-					},
-					{
-						"value": {
-							"en": "6780 Airolo",
-							"de": "6780 Airolo",
-							"it": "6780 Airolo"
-						}
-					},
-					{
-						"value": {
-							"en": "Switzerland",
-							"de": "Schweiz",
-							"it": "Svizzera"
-						}
-					}
-				],
-				[
-					{
-						"value": {
-							"en": "{{ company }}",
-							"de": "{{ company }}",
-							"it": "{{ company }}"
-						}
-					},
-					{
-						"value": {
-							"en": "{{ firstname }} {{ lastname }}",
-							"de": "{{ firstname }} {{ lastname }}",
-							"it": "{{ firstname }} {{ lastname }}"
-						}
-					},
-					{
-						"value": {
-							"en": "{{ street }}",
-							"de": "{{ street }}",
-							"it": "{{ street }}"
-						}
-					},
-					{
-						"value": {
-							"en": "{{ plz }} {{ town }}",
-							"de": "{{ plz }} {{ town }}",
-							"it": "{{ plz }} {{ town }}"
-						}
-					},
-					{
-						"value": {
-							"en": "{{ country }}",
-							"de": "{{ country }}",
-							"it": "{{ country }}"
-						}
-					}
-				]
-			]
-		}
-	],
-	[
+			"value": {
+				"en": {
+					"infos": [
+						[
+							"EORA Energy SNC",
+							"Luca Meli",
+							"Via della Stazione 39",
+							"6780 Airolo",
+							"Switzerland"
+						],
+						[
+							"{{ company }}",
+							"{{ firstname }} {{ lastname }}",
+							"{{ street }}",
+							"{{ plz }} {{ town }}",
+							"{{ country }}"
+						]
+					]
+				},
+				"de": {
+					"infos": [
+						[
+							"EORA Energy SNC",
+							"Luca Meli",
+							"Via della Stazione 39",
+							"6780 Airolo",
+							"Schweiz"
+						],
+						[
+							"{{ company }}",
+							"{{ firstname }} {{ lastname }}",
+							"{{ street }}",
+							"{{ plz }} {{ town }}",
+							"{{ country }}"
+						]
+					]
+				},
+				"it": {
+					"infos": [
+						[
+							"EORA Energy SNC",
+							"Luca Meli",
+							"Via della Stazione 39",
+							"6780 Airolo",
+							"Svizzera"
+						],
+						[
+							"{{ company }}",
+							"{{ firstname }} {{ lastname }}",
+							"{{ street }}",
+							"{{ plz }} {{ town }}",
+							"{{ country }}"
+						]
+					]
+				}
+			}
+		},
 		{
 			"type": "subheading",
 			"value": {
@@ -204,36 +181,32 @@
 		},
 		{
 			"type": "list",
-			"rows": [
-				{
-					"value": {
-						"en": "Already in the public domain or become public knowledge through no fault of the Receiving Party.",
-						"de": "Bereits öffentlich bekannt sind oder ohne Verschulden der empfangenden Partei öffentlich bekannt werden.",
-						"it": "Già di dominio pubblico o diventano di pubblico dominio senza colpa della Parte Ricevente."
-					}
+			"value": {
+				"en": {
+					"infos": [
+						"Already in the public domain or become public knowledge through no fault of the Receiving Party.",
+						"Legally in the possession of the Receiving Party at the time of entering into the NDA.",
+						"Communicated to the Receiving Party by third parties without breach of confidentiality obligations.",
+						"Developed independently of the Receiving Party without the use of confidential information."
+					]
 				},
-				{
-					"value": {
-						"en": "Legally in the possession of the Receiving Party at the time of entering into the NDA.",
-						"de": "Zum Zeitpunkt des Abschlusses der Geheimhaltungsvereinbarung rechtmäßig im Besitz der empfangenden Partei sind.",
-						"it": "Legalmente in possesso della Parte Ricevente al momento della stipula dell'NDA."
-					}
+				"de": {
+					"infos": [
+						"Bereits öffentlich bekannt sind oder ohne Verschulden der empfangenden Partei öffentlich bekannt werden.",
+						"Zum Zeitpunkt des Abschlusses der Geheimhaltungsvereinbarung rechtmäßig im Besitz der empfangenden Partei sind.",
+						"Der empfangenden Partei von Dritten ohne Verletzung von Vertraulichkeitsverpflichtungen mitgeteilt werden.",
+						"Unabhängig von der empfangenden Partei ohne Verwendung vertraulicher Informationen entwickelt wurden."
+					]
 				},
-				{
-					"value": {
-						"en": "Communicated to the Receiving Party by third parties without breach of confidentiality obligations.",
-						"de": "Der empfangenden Partei von Dritten ohne Verletzung von Vertraulichkeitsverpflichtungen mitgeteilt werden.",
-						"it": "Comunicate alla Parte Ricevente da terzi senza violazione degli obblighi di riservatezza."
-					}
-				},
-				{
-					"value": {
-						"en": "Developed independently of the Receiving Party without the use of confidential information.",
-						"de": "Unabhängig von der empfangenden Partei ohne Verwendung vertraulicher Informationen entwickelt wurden.",
-						"it": "Sviluppate in modo indipendente dalla Parte Ricevente senza l'uso di informazioni riservate."
-					}
+				"it": {
+					"infos": [
+						"Già di dominio pubblico o diventano di pubblico dominio senza colpa della Parte Ricevente.",
+						"Legalmente in possesso della Parte Ricevente al momento della stipula dell'NDA.",
+						"Comunicate alla Parte Ricevente da terzi senza violazione degli obblighi di riservatezza.",
+						"Sviluppate in modo indipendente dalla Parte Ricevente senza l'uso di informazioni riservate."
+					]
 				}
-			]
+			}
 		}
 	],
 	[
@@ -391,64 +364,74 @@
 		},
 		{
 			"type": "two-column-signatures",
-			"columns": [
-				{
-					"image": {
-						"value": "signature.svg"
+			"value": {
+				"en": [
+					{
+						"image": {
+							"value": "signature.svg"
+						},
+						"infos": [
+							"EORA Energy",
+							"{{ date }}",
+							"Luca Meli"
+						]
 					},
-					"infos": [
-						{
-							"value": {
-								"en": "EORA Energy",
-								"de": "EORA Energy",
-								"it": "EORA Energy"
-							}
+					{
+						"image": {
+							"value": "{{ signature }}"
 						},
-						{
-							"value": {
-								"en": "{{ date }}",
-								"de": "{{ date }}",
-								"it": "{{ date }}"
-							}
+						"infos": [
+							"{{ company }}",
+							"{{ date }}",
+							"{{ firstname }} {{ lastname }}"
+						]
+					}
+				],
+				"de": [
+					{
+						"image": {
+							"value": "signature.svg"
 						},
-						{
-							"value": {
-								"en": "Luca Meli",
-								"de": "Luca Meli",
-								"it": "Luca Meli"
-							}
-						}
-					]
-				},
-				{
-					"image": {
-						"value": "{{ signature }}"
+						"infos": [
+							"EORA Energy",
+							"{{ date }}",
+							"Luca Meli"
+						]
 					},
-					"infos": [
-						{
-							"value": {
-								"en": "{{ company }}",
-								"de": "{{ company }}",
-								"it": "{{ company }}"
-							}
+					{
+						"image": {
+							"value": "{{ signature }}"
 						},
-						{
-							"value": {
-								"en": "{{ date }}",
-								"de": "{{ date }}",
-								"it": "{{ date }}"
-							}
+						"infos": [
+							"{{ company }}",
+							"{{ date }}",
+							"{{ firstname }} {{ lastname }}"
+						]
+					}
+				],
+				"it": [
+					{
+						"image": {
+							"value": "signature.svg"
 						},
-						{
-							"value": {
-								"en": "{{ firstname }} {{ lastname }}",
-								"de": "{{ firstname }} {{ lastname }}",
-								"it": "{{ firstname }} {{ lastname }}"
-							}
-						}
-					]
-				}
-			]
+						"infos": [
+							"EORA Energy",
+							"{{ date }}",
+							"Luca Meli"
+						]
+					},
+					{
+						"image": {
+							"value": "{{ signature }}"
+						},
+						"infos": [
+							"{{ company }}",
+							"{{ date }}",
+							"{{ firstname }} {{ lastname }}"
+						]
+					}
+				]
+			}
 		}
 	]
 ]
