@@ -3,7 +3,7 @@ import {createContext} from 'solid-js';
 import {createStore} from 'solid-js/store';
 
 // FORM CONTEXT
-const FormContext = createContext('2');
+const FormContext = createContext();
 
 // FORM PROVIDER
 const FormProvider = (props) => {
@@ -28,11 +28,12 @@ const FormProvider = (props) => {
 			town: 'Oberrüti',
 			country: 'CH',
 			date: currentDate,
-			consent: 'checked',
+			consent: true,
 			signature: '',
 		},
 		state: {
 			isValid: false,
+			isLoading: false,
 		}
 	});
 	

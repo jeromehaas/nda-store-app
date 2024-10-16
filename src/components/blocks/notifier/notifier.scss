@@ -1,0 +1,34 @@
+@import '~/styles/configs/variables.scss';
+
+.notifier {
+  position: fixed;
+  top: 32px;
+  left: calc(-432px);
+  border-radius: 4px;
+  background-color: $blue-100;
+  padding: 24px 32px;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+
+  &--is-visible {
+    left: 32px;
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 16px;
+    width: 24px;
+  }
+
+  &__text {
+    color: $white-100;
+    line-height: 1.5;
+  }
+
+}
