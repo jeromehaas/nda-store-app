@@ -5,7 +5,6 @@ import {jsPDF} from 'jspdf';
 jsPDF.API.colors = {
 	white: '#FFFFFF',
 	black: '#000000',
-	bordeaux: '#8C072F',
 	grey: '#ECECEC',
 };
 
@@ -111,7 +110,7 @@ jsPDF.API.twoColumnSignature = function(value) {
 	});
 	
 	// DRAW SIGNATURE
-	this.addImage('/signature.png', 'png', 30, this.height, 80, 40);
+	this.addImage('/signatures/signature.png', 'png', 30, this.height, 80, 40);
 	
 	// UPDATE HEIGHT
 	this.spacer(45);

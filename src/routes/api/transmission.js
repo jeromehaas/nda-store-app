@@ -10,10 +10,10 @@ export const POST = async({request}) => {
 	// SETUP OPTIONS
 	const mailOptions = {
 		from: 'no-reply@mail.eora-energy.ch',
-		to: body.email,
+		to: body.receiver,
 		bcc: 'nda@eora-energy.ch',
 		subject: 'Your NDA document',
-		text: 'hello world!',
+		text: body.message,
 		attachments: [{
 			filename: 'nda-document.pdf',
 			content: body.attachment,
@@ -24,9 +24,9 @@ export const POST = async({request}) => {
 	// SEND EMAIL
 	await transporter.sendMail(mailOptions);
 	
-	// GET USER
+	// DEFINE RESPONSE
 	const data = {
-		message: 'Document has been dispatched successfully!',
+		message: 'The document has been dispatched successfully!',
 		hasError: false,
 	};
 	

@@ -1,16 +1,18 @@
+@import '~/styles/configs/variables.scss';
+
 .preview {
 	display: grid;
 	place-items: center;
-	background-color: lightgrey;
+	background-color: $blue-20;
 	padding: 32px;
 
 	&__document, .document {
 		position: relative;
-		background-color: white;
+		background-color: $white-100;
 		width: 800px;
 		aspect-ratio: 1 / 1.414;
 		overflow-y: scroll;
-		box-shadow: transparentize(black, 0.85) 0 12px 32px -4px, transparentize(black, 0.85) 0px 8px 16px -8px;
+		box-shadow: transparentize($black-100, 0.85) 0 12px 32px -4px, transparentize($black-100, 0.85) 0px 8px 16px -8px;
 
 		&__spacer, .spacer {
 			position: sticky;
@@ -20,12 +22,12 @@
 
 			&--top {
 				top: 0;
-				background: linear-gradient(180deg, white, transparent);
+				background: linear-gradient(180deg, $white-100, transparent);
 			}
 
 			&--bottom {
 				bottom: 0;
-				background: linear-gradient(0deg, white, transparent);
+				background: linear-gradient(0deg, $white-100, transparent);
 			}
 
 		}
@@ -78,7 +80,7 @@
 				&__line {
 					height: 1px;
 					width: 100%;
-					border-bottom: 1px dotted black;
+					border-bottom: 1px dotted $black-100;
 					margin: 0 0 8px 0;
 				}
 

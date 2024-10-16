@@ -1,8 +1,11 @@
+@import '~/styles/configs/variables.scss';
+
 .checkbox-input {
 
 	&__label {
 		display: block;
 		margin-bottom: 8px;
+		color: $blue-100;
 	}
 
 	&__options, .options {
@@ -15,7 +18,7 @@
 			height: 20px;
 			padding: 8px;
 			border-radius: 4px;
-			border: 1px solid grey;
+			border: 1px solid $blue-60;
 		}
 
 	}

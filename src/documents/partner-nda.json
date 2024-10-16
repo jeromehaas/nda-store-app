@@ -368,7 +368,7 @@
 				"en": [
 					{
 						"image": {
-							"value": "signature.svg"
+							"value": "signatures/signature.svg"
 						},
 						"infos": [
 							"EORA Energy",
@@ -390,7 +390,7 @@
 				"de": [
 					{
 						"image": {
-							"value": "signature.svg"
+						  	"value": "signatures/signature.svg"
 						},
 						"infos": [
 							"EORA Energy",
@@ -412,7 +412,7 @@
 				"it": [
 					{
 						"image": {
-							"value": "signature.svg"
+						  	"value": "signatures/signature.svg"
 						},
 						"infos": [
 							"EORA Energy",

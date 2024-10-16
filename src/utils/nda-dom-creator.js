@@ -96,7 +96,7 @@ class NdaDomCreator {
 			const newSrc = this.replacePlaceholders(src, variables);
 			
 			// APPEND SOURCE
-			node.setAttribute('src', newSrc || 'placeholder.svg');
+			node.setAttribute('src', newSrc || 'signatures/signature-placeholder.svg');
 			
 		}
 		

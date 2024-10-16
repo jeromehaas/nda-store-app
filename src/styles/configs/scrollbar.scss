@@ -1,13 +1,15 @@
+@import '~/styles/configs/variables.scss';
+
 *::-webkit-scrollbar {
 	width: 2px !important;
 }
 
 *::-webkit-scrollbar-track {
-	background: white;
+	background: $white-100;
 }
 
 *::-webkit-scrollbar-thumb {
-	background: black;
+	background: $black-100;
 }
 
 body::-webkit-scrollbar {

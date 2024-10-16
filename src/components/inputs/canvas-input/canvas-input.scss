@@ -1,15 +1,18 @@
+@import '~/styles/configs/variables.scss';
+
 .canvas-input {
 
 	&__label {
 		display: block;
 		margin-bottom: 9px;
+		color: $blue-100;
 	}
 
 	&__field, .field {
 		position: relative;
 		width: 100%;
 		border-radius: 4px;
-		border: 1px solid grey;
+		border: 1px solid $blue-100;
 		cursor: crosshair;
 		overflow: hidden;
 
@@ -17,11 +20,11 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
-			border-top: 1px solid black;
-			border-left: 1px solid black;
+			border-top: 1px solid $blue-100;
+			border-left: 1px solid $blue-100;
 			padding: 8px;
-			background-color: white;
-			color: black;
+			background-color: $white-100;
+			color: $blue-100;
 			border-radius: 4px;
 		}
 
