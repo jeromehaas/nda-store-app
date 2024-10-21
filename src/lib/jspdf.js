@@ -69,7 +69,7 @@ jsPDF.API.twoColumnList = function(value) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 11, color: this.colors.black},
 		draw: {color: this.colors.black},
 	});
 	
@@ -103,7 +103,7 @@ jsPDF.API.twoColumnList = function(value) {
 jsPDF.API.twoColumnSignature = function(value) {
 	
 	this.setStyle({
-		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 11, color: this.colors.black},
 		draw: {color: this.colors.black},
 		fill: {color: this.colors.black},
 		line: {dashPattern: [2, 2]},
@@ -167,7 +167,7 @@ jsPDF.API.list = function(value) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 11, color: this.colors.black},
 		draw: {color: this.colors.black},
 	});
 	
@@ -188,7 +188,7 @@ jsPDF.API.textBlock = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 11, color: this.colors.black},
 		draw: {color: this.colors.black},
 	});
 	
@@ -219,7 +219,7 @@ jsPDF.API.listItem = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'normal', size: 10, color: this.colors.black},
+		font: {family: 'times', style: 'normal', size: 11, color: this.colors.black},
 		draw: {color: this.colors.black},
 		fill: {color: this.colors.black},
 	});
@@ -264,7 +264,7 @@ jsPDF.API.header = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'bold', size: 16, color: this.colors.black},
+		font: {family: 'times', style: 'bold', size: 18, color: this.colors.black},
 		line: {width: 0.5},
 		fill: {color: this.colors.grey},
 		draw: {color: this.colors.black},
@@ -278,11 +278,14 @@ jsPDF.API.header = function(text) {
 	// CHECK SPACE
 	this.checkSpace(text);
 	
+	// UPDATE HEIGHT
+	this.height += 30;
+	
 	// PRINT TITLE
 	this.text(text, pageCenter, this.height, 'left');
 	
 	// UPDATE HEIGHT
-	this.height += 30;
+	this.height += 50;
 	
 };
 
@@ -291,7 +294,7 @@ jsPDF.API.title = function(text) {
 	
 	// UPDATE STYLE
 	this.setStyle({
-		font: {family: 'times', style: 'bold', size: 12, color: this.colors.black},
+		font: {family: 'times', style: 'bold', size: 15, color: this.colors.black},
 		line: {width: 0.5},
 		fill: {color: this.colors.grey},
 		draw: {color: this.colors.black},
@@ -301,7 +304,7 @@ jsPDF.API.title = function(text) {
 	this.checkSpace(text);
 	
 	// PRINT TITLE
-	this.text(text, 30, this.height + 12, 'left');
+	this.text(text, 30, this.height + 10, 'left');
 	
 	// UPDATE HEIGHT
 	this.height += 25;

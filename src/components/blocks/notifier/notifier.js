@@ -21,6 +21,7 @@ const Notifier = () => {
 						{form.language === 'en' && ('The message was sent successfully!')}
 						{form.language === 'de' && ('Die Nachricht wurde übermittelt!')}
 						{form.language === 'it' && ('Il messaggio è stato trasmesso con successo!')}
+					  {form.language === 'fr' && ('Le message a été envoyé avec succès!')}
 					</p>
 				</div>
 			)}
@@ -31,6 +32,7 @@ const Notifier = () => {
 						{form.language === 'en' && ('The message could not be delivered!')}
 						{form.language === 'de' && ('Die Nachricht konnte nicht übermittelt werden!')}
 						{form.language === 'it' && ('Non è stato possibile trasmettere il messaggio!')}
+						{form.language === 'fr' && ('Le message n\'a pas pu être envoyé!')}
 					</p>
 				</div>
 			)}
