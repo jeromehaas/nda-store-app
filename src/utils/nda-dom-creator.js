@@ -34,9 +34,7 @@ class NdaDomCreator {
 		// RETURN
 		return this.document;
 		
-		
 	};
-	
 	
 	// CREATE NODE
 	createNode = ({tag, className, attributes}) => {
@@ -178,7 +176,7 @@ class NdaDomCreator {
 						info.map((text) => {
 							
 							// CREATE ROW NODE
-							const rowNode = this.createNode({tag: 'p', className: 'two-column-list__row'});
+							const rowNode = this.createNode({tag: 'p', className: 'two-column-list__row list-item'});
 							
 							// APPEND TEXT
 							rowNode.innerText = text;
@@ -245,13 +243,13 @@ class NdaDomCreator {
 						columnNode.append(lineNode);
 						
 						// CREATE INFOS-NODE
-						const infosNode = this.createNode({tag: 'div', className: 'signatures__infos'});
+						const infosNode = this.createNode({tag: 'p', className: 'signatures__infos paragraph'});
 						
 						// LOOP OVER INFOS
 						column.infos.map((text) => {
 							
 							// CREATE INFOS-NODE
-							const rowNode = this.createNode({tag: 'div', className: 'signatures__info'});
+							const rowNode = this.createNode({tag: 'p', className: 'signatures__info paragraph'});
 							
 							// APPEND TEXT
 							rowNode.innerText = text;

@@ -1,98 +1,136 @@
 @import '~/styles/configs/variables.scss';
 
 .preview {
-	display: grid;
-	place-items: center;
-	background-color: $blue-20;
-	padding: 32px;
+  display: grid;
+  place-items: center;
+  background-color: transparentize($blue-20, 0.8);
+  padding: 32px;
 
-	&__document, .document {
-		position: relative;
-		background-color: $white-100;
-		width: 800px;
-		aspect-ratio: 1 / 1.414;
-		overflow-y: scroll;
-		box-shadow: transparentize($black-100, 0.85) 0 12px 32px -4px, transparentize($black-100, 0.85) 0px 8px 16px -8px;
+  *::-webkit-scrollbar {
+    width: 2px !important;
+  }
 
-		&__spacer, .spacer {
-			position: sticky;
-			right: 0;
-			left: 0;
-			height: 40px;
+  &__document, .document {
+    position: relative;
+    background-color: $white-100;
+    width: 800px;
+    aspect-ratio: 1 / 1.414;
+    overflow-y: scroll;
+    box-shadow: transparentize($black-100, 0.85) 0 12px 32px -4px, transparentize($black-100, 0.85) 0px 8px 16px -8px;
 
-			&--top {
-				top: 0;
-				background: linear-gradient(180deg, $white-100, transparent);
-			}
+    &__spacer, .spacer {
+      position: sticky;
+      right: 0;
+      left: 0;
+      height: 40px;
 
-			&--bottom {
-				bottom: 0;
-				background: linear-gradient(0deg, $white-100, transparent);
-			}
+      &--top {
+        top: 0;
+        background: linear-gradient(180deg, $white-100, transparent);
+      }
 
-		}
+      &--bottom {
+        bottom: 0;
+        background: linear-gradient(0deg, $white-100, transparent);
+      }
 
-		&__container, .container {
-			padding: 64px;
+    }
 
-			.block {
-				margin-bottom: 24px;
-			}
+    &__container, .container {
+      padding: 64px;
 
-			.heading {
-				margin-bottom: 32px;
-			}
+      .block {
+        margin-bottom: 24px;
+      }
 
-			.subheading {
-				margin-bottom: 4px;
-			}
+      .heading {
+        margin-bottom: 32px;
+      }
 
-			.two-column-list {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-gap: 32px;
-				margin-bottom: 12px;
-			}
+      .subheading {
+        margin-bottom: 4px;
+      }
 
-			.list {
+      .two-column-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 32px;
+        margin-bottom: 12px;
+      }
 
-				&__row {
-					margin-left: 24px;
-				}
+      .list {
 
-			}
+        &__row {
+          margin-left: 24px;
+        }
 
-			.paragraph {
-				margin-bottom: 8px;
-			}
+      }
 
-			.signatures {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 32px;
+      .paragraph {
+        margin-bottom: 8px;
+      }
 
-				&__image {
-					display: inline-block;
-					width: 75%;
-					aspect-ratio: 2 / 1;
-				}
+      .signatures {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 32px;
 
-				&__line {
-					height: 1px;
-					width: 100%;
-					border-bottom: 1px dotted $black-100;
-					margin: 0 0 8px 0;
-				}
+        &__image {
+          display: inline-block;
+          width: 75%;
+          aspect-ratio: 2 / 1;
+        }
 
-				&__infos {
-					display: grid;
-					grid-template-columns: 1fr auto;
-				}
+        &__line {
+          height: 1px;
+          width: 100%;
+          border-bottom: 1px dotted $black-100;
+          margin: 0 0 8px 0;
+        }
 
-			}
+        &__infos {
+          display: grid;
+          grid-template-columns: 1fr auto;
+        }
 
-		}
+      }
 
-	}
+    }
+
+  }
+
+  @media (max-width: 1000px) {
+
+    &__document, .document {
+      width: 600px;
+
+      &__container, .container {
+        padding: 40px;
+      }
+
+      &__spacer, .spacer {
+        height: 32px;
+      }
+
+    }
+
+  }
+
+  @media (max-width: 700px) {
+
+    &__document, .document {
+      width: 480px;
+
+      &__container, .container {
+        padding: 24px;
+      }
+
+      &__spacer, .spacer {
+        height: 24px;
+      }
+
+    }
+
+  }
 
 }

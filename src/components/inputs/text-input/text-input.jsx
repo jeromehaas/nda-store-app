@@ -12,8 +12,8 @@ const TextInput = (props) => {
 	// RENDER
 	return (
 	<div class={`text-input ${props.className}`}>
-		<label class='text-input__label' for={props.name}>{props.label[form.language]}</label>
-		<input class='text-input__field' name={props.name} id={props.id} type='text' value={props.value} onInput={props.onInput}/>
+		<label class='text-input__label label' for={props.name}>{props.label[form.language]}</label>
+		<input class='text-input__field field' name={props.name} id={props.id} type='text' value={props.value} onInput={props.onInput}/>
 	</div>
 	);
 	

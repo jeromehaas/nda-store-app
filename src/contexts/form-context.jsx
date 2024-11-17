@@ -19,21 +19,22 @@ const FormProvider = (props) => {
 	const [form, setForm] = createStore({
 		language: 'en',
 		fields: {
-			company: 'haas web solutions',
-			firstname: 'Jérôme',
-			lastname: 'Haas',
-			email: 'hello@jeromehaas.ch',
-			street: 'Bodenmatte 16a',
-			plz: '5647',
-			town: 'Oberrüti',
-			country: 'CH',
+			company: '',
+			firstname: '',
+			lastname: '',
+			email: '',
+			street: '',
+			plz: '',
+			town: '',
+			country: '',
 			date: currentDate,
-			consent: true,
+			consent: false,
 			signature: '',
 		},
 		state: {
 			isValid: false,
 			isLoading: false,
+			isVisible: true,
 		}
 	});
 	

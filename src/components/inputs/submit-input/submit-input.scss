@@ -9,7 +9,7 @@
 	cursor: pointer;
 
 	&:disabled {
-		background-color: $blue-20;
+		background-color: transparentize($blue-20, 0.8);
 		color: $blue-100;
 	}
 

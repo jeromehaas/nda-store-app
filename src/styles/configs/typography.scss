@@ -1,16 +1,71 @@
 h1, h2, h3, h4, h5, h6, p, li, a, button, input, label {
-	font-family: sans-serif;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.sidebar {
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .field {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
 }
 
 .preview {
 
-	* {
-		font-family: sans-serif;
-		font-weight: 400
-	}
+  * {
+    font-family: 'Times-New-Roman', serif;
+    font-weight: 400
+  }
 
-	.heading, .subheading {
-		font-weight: 600
-	}
+  .heading, .subheading {
+    font-weight: 600
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .paragraph,
+  .list-item {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .preview {
+
+    .heading {
+      font-size: 20px;
+    }
+
+    .subheading {
+      font-size: 14px;
+    }
+
+    .paragraph,
+    .list-item {
+      font-size: 10px;
+    }
+
+  }
 
 }

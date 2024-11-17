@@ -1,7 +1,6 @@
 // IMPORTS
 import {jsPDF} from '~/lib/jspdf.js';
 import partnerNda from '~/documents/partner-nda.json';
-import {Buffer} from 'buffer';
 
 // CLASS NDA PDF CREATOR
 class NdaPdfCreator {

@@ -9,9 +9,9 @@ export const POST = async({request}) => {
 	
 	// SETUP OPTIONS
 	const mailOptions = {
-		from: 'no-reply@mail.eora-energy.ch',
+		from: 'EMAIL',
 		to: body.receiver,
-		bcc: 'nda@eora-energy.ch',
+		bcc: 'EMAIL',
 		subject: 'Your NDA document',
 		text: body.message,
 		attachments: [{

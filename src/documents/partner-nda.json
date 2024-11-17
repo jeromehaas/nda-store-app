@@ -36,10 +36,10 @@
 		  "infos": [
 			[
 			  "Disclosing Party",
-			  "EORA Energy SNC",
-			  "Via della Stazione 39",
-			  "6915 Lugano",
-			  "Switzerland"
+			  "COMPANY",
+			  "STREET",
+			  "PLZ STREET",
+			  "COUNTRY"
 			],
 			[
 			  "Receiving Party",
@@ -55,11 +55,11 @@
 		  "infos": [
 			[
 			  "Offenlegende Partei",
-			  "EORA Energy SNC",
-			  "Luca Meli",
-			  "Via della Stazione 39",
-			  "6780 Airolo",
-			  "Schweiz"
+			  "COMPANY",
+			  "FIRSTNAME LASTNAME",
+			  "STREET",
+			  "PLZ TOWN",
+			  "COUNTRY"
 			],
 			[
 			  "Empfangende Partei",
@@ -75,11 +75,11 @@
 		  "infos": [
 			[
 			  "Parte Divulgante",
-			  "EORA Energy SNC",
-			  "Luca Meli",
-			  "Via della Stazione 39",
-			  "6780 Airolo",
-			  "Svizzera"
+			  "COMPANY",
+			  "FIRSTNAME LASTNAME",
+			  "STREET",
+			  "PLZ TOWN",
+			  "COUNTRY"
 			],
 			[
 			  "Parte Ricevente",
@@ -95,11 +95,11 @@
 		  "infos": [
 			[
 			  "Partie Divulgatrice",
-			  "EORA Energy SNC",
-			  "Luca Meli",
-			  "Via della Stazione 39",
-			  "6780 Airolo",
-			  "Suisse"
+			  "COMPANY",
+			  "FIRSTNAME LASTNAME",
+			  "STREET",
+			  "PLZ TOWN",
+			  "COUNTRY"
 			],
 			[
 			  "Partie Réceptrice",
@@ -453,9 +453,9 @@
 			  "value": "signatures/signature.svg"
 			},
 			"infos": [
-			  "EORA Energy",
+			  "COMPANY",
 			  "{{ date }}",
-			  "Luca Meli"
+			  "FIRSTNAME LASTNAME"
 			]
 		  },
 		  {
@@ -475,9 +475,9 @@
 			  "value": "signatures/signature.svg"
 			},
 			"infos": [
-			  "EORA Energy",
+			  "COMPANY",
 			  "{{ date }}",
-			  "Luca Meli"
+			  "FIRSTNAME LASTNAME"
 			]
 		  },
 		  {
@@ -497,9 +497,9 @@
 			  "value": "signatures/signature.svg"
 			},
 			"infos": [
-			  "EORA Energy",
+			  "COMPANY",
 			  "{{ date }}",
-			  "Luca Meli"
+			  "FIRSTNAME LASTNAME"
 			]
 		  },
 		  {
@@ -519,9 +519,9 @@
 			  "value": "signatures/signature.svg"
 			},
 			"infos": [
-			  "EORA Energy",
+			  "COMPANY",
 			  "{{ date }}",
-			  "Luca Meli"
+			  "FIRSTNAME LASTNAME"
 			]
 		  },
 		  {

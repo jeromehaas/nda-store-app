@@ -17,6 +17,7 @@ const Sidebar = () => {
 	
 	// SETUP STATE
 	const [signaturePad, setSignaturePad] = createSignal(null);
+	const [sidebarVisibility, setSidebarVisibility] = createSignal(null);
 	
 	// SETUP CONTEXTS
 	const [form, setForm] = useContext(FormContext);
@@ -40,22 +41,28 @@ const Sidebar = () => {
 	const handleLanguageUpdate = () => {
 		if (form.language === 'en') {
 			setForm({ ...form, language: 'de' });
-		} else if (form.language === 'de') {
-			setForm({ ...form, language: 'it' });
-		} else if (form.language === 'it') {
-			setForm({ ...form, language: 'fr' });
-		} else if (form.language === 'fr') {
-			setForm({ ...form, language: 'en' });
 		}
+		else
+			if (form.language === 'de') {
+				setForm({ ...form, language: 'it' });
+			}
+			else
+				if (form.language === 'it') {
+					setForm({ ...form, language: 'fr' });
+				}
+				else
+					if (form.language === 'fr') {
+						setForm({ ...form, language: 'en' });
+					}
 	};
 	
 	// HANDLE TEXT INPUT UPDATE
-	const handleTextInputUpdate = ({event, field}) => {
+	const handleTextInputUpdate = ({ event, field }) => {
 		setForm((form => ({ ...form, fields: { ...form.fields, [field]: event.target.value } })));
 	};
 	
 	// HANDLE CHECKBOX INPUT UPDATE
-	const handleCheckboxInputUpdate = ({event, field}) => {
+	const handleCheckboxInputUpdate = ({ event, field }) => {
 		setForm((form => ({ ...form, fields: { ...form.fields, [field]: event.target.checked } })));
 	};
 	
@@ -63,13 +70,14 @@ const Sidebar = () => {
 	const checkFormValidity = () => {
 		if (form.fields.company !== '' && form.fields.firstname !== '' && form.fields.lastname !== '' && form.fields.street !== '' && form.fields.plz !== '' && form.fields.town !== '' && form.fields.country !== '' && form.fields.date !== '' && form.fields.consent === true && form.fields.signature !== '') {
 			setForm((form) => ({ ...form, state: { ...form.state, isValid: true } }));
-		} else {
+		}
+		else {
 			setForm((form) => ({ ...form, state: { ...form.state, isValid: false } }));
 		}
 	};
 	
 	// HANDLE RESET SIGNATURE
-	const handleResetSignature = ({event}) => {
+	const handleResetSignature = ({ event }) => {
 		
 		// PREVENT DEFAULT
 		event.preventDefault();
@@ -83,7 +91,7 @@ const Sidebar = () => {
 	};
 	
 	// HANDLE RESET FORM
-	const handleResetFields = ({event}) => {
+	const handleResetFields = ({ event }) => {
 		
 		// PREVENT DEFAULT
 		event.preventDefault();
@@ -114,8 +122,13 @@ const Sidebar = () => {
 		
 	};
 	
+	// HANDLE TOGGLE VISIBILITY
+	const handleToggleVisibility = () => {
+		setSidebarVisibility((value) => !value);
+	};
+	
 	// HANDLE SUBMIT
-	const handleSubmit = ({event}) => {
+	const handleSubmit = ({ event }) => {
 		
 		// TRY-CATCH BLOCK
 		try {
@@ -124,7 +137,7 @@ const Sidebar = () => {
 			event.preventDefault();
 			
 			// UPDATE LOADING STATE
-			handleSetLoadingState({ value: true })
+			handleSetLoadingState({ value: true });
 			
 			// GET VALUES
 			ndaPdfCreator.printDocument({ language: form.language, variables: form.fields });
@@ -136,15 +149,15 @@ const Sidebar = () => {
 			dispatcher.sendMail({ variables: form.fields, language: form.language, attachment: arrayBuffer });
 			
 			// SHOW NOTIFIER
-			handleShowNotifier({code: 'S1'});
+			handleShowNotifier({ code: 'S1' });
 			
 			// RESET FIELDS AND SIGNATURE
-			handleResetFields({event: event});
-			handleResetSignature({event: event});
+			handleResetFields({ event: event });
+			handleResetSignature({ event: event });
 			
 		}
 			
-		// HANDLE ERRORS
+			// HANDLE ERRORS
 		catch (error) {
 			
 			// UPDATE NOTIFIER
@@ -152,11 +165,11 @@ const Sidebar = () => {
 			
 		}
 			
-		// FINALLY
+			// FINALLY
 		finally {
 			
 			// UPDATE LOADING STATE
-			handleSetLoadingState({ value: false })
+			handleSetLoadingState({ value: false });
 		}
 		
 	};
@@ -179,28 +192,33 @@ const Sidebar = () => {
 	
 	// RENDER
 	return (
-		<div class="sidebar">
-			<button class="sidebar__language-toggle" onClick={handleLanguageUpdate}>{form.language}</button>
-			<h3 class="sidebar__heading">
-				{form.language === 'en' && 'Confidentialy Agreement'}
-				{form.language === 'de' && 'Vertraulichkeitsvereinbarung'}
-				{form.language === 'it' && 'Contratto di Riservatezza'}
-				{form.language === 'it' && 'Accord de Condidentialité'}
-			</h3>
-			<form class="sidebar__form form" action="">
-				<TextInput className="form__input form__input--100" label={{ en: 'Company', de: 'Firma', it: 'Azienda', fr: 'Entreprise'}} name="company" id="company" value={form.fields.company} onInput={(event) => handleTextInputUpdate({event: event, field: 'company'})}/>
-				<TextInput className="form__input form__input--100" label={{ en: 'Firstname', de: 'Vorname', it: 'Nome', fr: 'Prénom' }} name="firstname" id="firstname" value={form.fields.firstname} onInput={(event) => handleTextInputUpdate({event: event, field: 'firstname'})}/>
-				<TextInput className="form__input form__input--100" label={{ en: 'Lastname', de: 'Lastname', it: 'Cognome', fr: 'Nom de famille' }} name="lastname" id="lastname" value={form.fields.lastname} onInput={(event) => handleTextInputUpdate({event: event, field: 'lastname'})}/>
-				<TextInput className="form__input form__input--100" label={{ en: 'E-Mail', de: 'E-Mail', it: 'E-Mail', fr: 'E-Mail' }} name="email" id="email" value={form.fields.email} onInput={(event) => handleTextInputUpdate({event: event, field: 'email'})}/>
-				<TextInput className="form__input form__input--100" label={{ en: 'Street', de: 'Strasse', it: 'Via', fr: 'Rue' }} name="street" id="street" value={form.fields.street} onInput={(event) => handleTextInputUpdate({event: event, field:'street'})}/>
-				<TextInput className="form__input form__input--25" label={{ en: 'PLZ', de: 'PLZ', it: 'CAP', fr: 'Code postal' }} name="plz" id="plz" value={form.fields.plz} onInput={(event) => handleTextInputUpdate({event: event, field: 'plz'})}/>
-				<TextInput className="form__input form__input--75" label={{ en: 'Town', de: 'Ort', it: 'Città', fr: 'Ville' }} name="town" id="town" value={form.fields.town} onInput={(event) => handleTextInputUpdate({event: event, field: 'town'})}/>
-				<TextInput className="form__input form__input--100" label={{ en: 'Country', de: 'Country', it: 'Paese', fr: 'Pays' }} name="country" id="country" value={form.fields.country} onInput={(event) => handleTextInputUpdate({event: event, field: 'country'})}/>
-				<DateInput className="form__input form__input--100" label={{ en: 'Date', de: 'Datum', it: 'Data', fr: 'Date' }} name="date" id="date" value={form.fields.date} onInput={(event) => handleTextInputUpdate({event: event, field: 'date'})}/>
-				<CheckboxInput className="form__input form__input--100" label={{ en: 'Consent', de: 'Einverständnis', it: 'Consenso' , fr: 'Consentement'}} options={[{ name: 'consent', id: 'consent', value: form.fields.consent, onInput: (event) => handleCheckboxInputUpdate({event: event, field: 'consent'}), label: {en: 'I hereby confirm that I have thoroughly read, fully understood, and accept the terms and conditions outlined in the Non-Disclosure Agreement provided to me.', de: 'Hiermit bestätige ich, dass ich die im Geheimhaltungsvereinbarung dargelegten Bedingungen gründlich gelesen, vollständig verstanden und akzeptiert habe.', it: 'Con la presente confermo di aver letto attentamente, compreso pienamente e accettato i termini e le condizioni descritti nell\'Accordo di Non Divulgazione che mi è stato fornito.', fr: 'Par la présente, je confirme avoir lu attentivement, bien compris et accepté les termes et conditions énoncés dans l\'accord de non-divulgation qui m\'a été fourni.' }}]}/>
-				<CanvasInput className="form__input form__input--100" label={{ en: 'Signature', de: 'Unterschrift', it: 'Firma', fr: 'Signature' }} name="signature" id="signature" ref={signaturePadRef} onEnd={(event) => handleCanvasInputUpdate({event: event})} onReset={(event) => handleResetSignature({event: event})} buttonLabel={{ en: 'Reset', de: 'Zurücksetzen', it: 'Reimposta', fr: 'Réinitialiser' }}/>
-				<SubmitInput className="form__input form__input--100" label={{ en: 'Submit', de: 'Absenden', it: 'Invia', fr: 'Envoyer' }} isLoading={form.state.isLoading} isValid={form.state.isValid} onClick={(event) => handleSubmit({event: event})}/>
-			</form>
+		<div class={`sidebar ${sidebarVisibility() ? 'sidebar--is-visible' : ''}`}>
+			<div className="sidebar__wrapper">
+				<button class="sidebar__language-toggle" onClick={ handleLanguageUpdate }>{ form.language }</button>
+				<h3 class="sidebar__heading heading">
+					{ form.language === 'en' && 'Confidentialy Agreement' }
+					{ form.language === 'de' && 'Vertraulichkeitsvereinbarung' }
+					{ form.language === 'it' && 'Contratto di Riservatezza' }
+					{ form.language === 'fr' && 'Accord de Condidentialité' }
+				</h3>
+				<form class="sidebar__form form" action="">
+					<TextInput className="form__input form__input--100" label={ { en: 'Company', de: 'Firma', it: 'Azienda', fr: 'Entreprise' } } name="company" id="company" value={ form.fields.company } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'company' }) }/>
+					<TextInput className="form__input form__input--100" label={ { en: 'Firstname', de: 'Vorname', it: 'Nome', fr: 'Prénom' } } name="firstname" id="firstname" value={ form.fields.firstname } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'firstname' }) }/>
+					<TextInput className="form__input form__input--100" label={ { en: 'Lastname', de: 'Lastname', it: 'Cognome', fr: 'Nom de famille' } } name="lastname" id="lastname" value={ form.fields.lastname } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'lastname' }) }/>
+					<TextInput className="form__input form__input--100" label={ { en: 'E-Mail', de: 'E-Mail', it: 'E-Mail', fr: 'E-Mail' } } name="email" id="email" value={ form.fields.email } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'email' }) }/>
+					<TextInput className="form__input form__input--100" label={ { en: 'Street', de: 'Strasse', it: 'Via', fr: 'Rue' } } name="street" id="street" value={ form.fields.street } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'street' }) }/>
+					<TextInput className="form__input form__input--25" label={ { en: 'PLZ', de: 'PLZ', it: 'CAP', fr: 'CP' } } name="plz" id="plz" value={ form.fields.plz } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'plz' }) }/>
+					<TextInput className="form__input form__input--75" label={ { en: 'Town', de: 'Ort', it: 'Città', fr: 'Ville' } } name="town" id="town" value={ form.fields.town } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'town' }) }/>
+					<TextInput className="form__input form__input--100" label={ { en: 'Country', de: 'Country', it: 'Paese', fr: 'Pays' } } name="country" id="country" value={ form.fields.country } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'country' }) }/>
+					<DateInput className="form__input form__input--100" label={ { en: 'Date', de: 'Datum', it: 'Data', fr: 'Date' } } name="date" id="date" value={ form.fields.date } onInput={ (event) => handleTextInputUpdate({ event: event, field: 'date' }) }/>
+					<CheckboxInput className="form__input form__input--100" label={ { en: 'Consent', de: 'Einverständnis', it: 'Consenso', fr: 'Consentement' } }options={ [{ name: 'consent', id: 'consent', value: form.fields.consent, onInput: (event) => handleCheckboxInputUpdate({ event: event, field: 'consent' }), label: { en: 'I hereby confirm that I have thoroughly read, fully understood, and accept the terms and conditions outlined in the Non-Disclosure Agreement provided to me.', de: 'Hiermit bestätige ich, dass ich die im Geheimhaltungsvereinbarung dargelegten Bedingungen gründlich gelesen, vollständig verstanden und akzeptiert habe.', it: 'Con la presente confermo di aver letto attentamente, compreso pienamente e accettato i termini e le condizioni descritti nell\'Accordo di Non Divulgazione che mi è stato fornito.', fr: 'Par la présente, je confirme avoir lu attentivement, bien compris et accepté les termes et conditions énoncés dans l\'accord de non-divulgation qui m\'a été fourni.' } }] }/>
+					<CanvasInput className="form__input form__input--100" label={ { en: 'Signature', de: 'Unterschrift', it: 'Firma', fr: 'Signature' } } name="signature" id="signature" ref={ signaturePadRef } onEnd={ (event) => handleCanvasInputUpdate({ event: event }) } onReset={ (event) => handleResetSignature({ event: event }) } buttonLabel={ { en: 'Reset', de: 'Zurücksetzen', it: 'Reimposta', fr: 'Réinitialiser' } }/>
+					<SubmitInput className="form__input form__input--100" label={ { en: 'Submit', de: 'Absenden', it: 'Invia', fr: 'Envoyer' } } isLoading={ form.state.isLoading } isValid={ form.state.isValid } onClick={ (event) => handleSubmit({ event: event }) }/>
+				</form>
+				<div className="sidebar__visibility-toggle visibility-toggle" onClick={handleToggleVisibility}>
+					<img className='visibility-toggle__icon' src="./icons/icon-menu.svg" alt="Menu"/>
+				</div>
+			</div>
 		</div>
 	);
 	

@@ -1,6 +1,8 @@
 @import '~/styles/configs/variables.scss';
 
 .canvas-input {
+	width: 100%;
+	overflow: hidden;
 
 	&__label {
 		display: block;
@@ -15,6 +17,7 @@
 		border: 1px solid $blue-100;
 		cursor: crosshair;
 		overflow: hidden;
+		max-width: 100%;
 
 		&__reset-button {
 			position: absolute;

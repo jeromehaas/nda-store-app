@@ -11,7 +11,7 @@ const SubmitInput = (props) => {
 	
 	// RENDER
 	return (
-		<input class={`submit-input ${props.className}`} type='submit' value={props.isLoading ? '...' : props.label[form.language]} disabled={!props.isValid} onClick={props.onClick} />
+		<input class={`submit-input button ${props.className}`} type='submit' value={props.isLoading ? '...' : props.label[form.language]} disabled={!props.isValid} onClick={props.onClick} />
 	);
 	
 };
